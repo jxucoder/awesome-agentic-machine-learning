@@ -30,7 +30,8 @@ Agentic ML refers to autonomous AI systems that can plan, execute, and iterate o
 
 | Project | Description | Stars |
 |---------|-------------|-------|
-| [Karpathy](https://github.com/K-Dense-AI/karpathy) | An agentic Machine Learning Engineer that trains state-of-the-art ML models using Claude Code SDK and Google ADK. | ![GitHub stars](https://img.shields.io/github/stars/K-Dense-AI/karpathy?style=flat-square) |
+| [K-Dense Web](https://k-dense.ai/) | Autonomous AI Scientist platform with dual-loop multi-agent system for deep research, coding, execution, and ML. Surpasses GPT-5 on BixBench by 27%. | - |
+| [Karpathy](https://github.com/K-Dense-AI/karpathy) | An agentic Machine Learning Engineer that trains state-of-the-art ML models using Claude Code SDK and Google ADK. By K-Dense. | ![GitHub stars](https://img.shields.io/github/stars/K-Dense-AI/karpathy?style=flat-square) |
 | [AutoGluon](https://github.com/autogluon/autogluon) | Open-source AutoML toolkit by Amazon with foundational models and LLM agents for state-of-the-art performance across diverse ML tasks. [NeurIPS 2024 Workshop](https://neurips.cc/virtual/2024/expo-workshop/100328) | ![GitHub stars](https://img.shields.io/github/stars/autogluon/autogluon?style=flat-square) |
 
 ---
