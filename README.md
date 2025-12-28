@@ -18,7 +18,6 @@ Agentic ML refers to autonomous AI systems that can plan, execute, and iterate o
   - [Domain-Specific Agentic ML](#domain-specific-agentic-ml)
   - [LLM-Based ML Optimization](#llm-based-ml-optimization)
   - [Foundation Models for ML](#foundation-models-for-ml)
-- [Tutorials & Guides](#tutorials--guides)
 - [Datasets & Benchmarks](#datasets--benchmarks)
 - [Contributing](#contributing)
 
@@ -44,6 +43,9 @@ Agentic ML refers to autonomous AI systems that can plan, execute, and iterate o
 |---------|-------------|-------|
 | [AutoML-Agent](https://github.com/DeepAuto-AI/automl-agent) | A Multi-Agent LLM Framework for Full-Pipeline AutoML. Accepted at ICML 2025. | ![GitHub stars](https://img.shields.io/github/stars/DeepAuto-AI/automl-agent?style=flat-square) |
 | [AutoGluon Assistant (MLZero)](https://github.com/autogluon/autogluon-assistant) | Multi-agent system for end-to-end multimodal ML automation with zero human intervention. NeurIPS 2025. | ![GitHub stars](https://img.shields.io/github/stars/autogluon/autogluon-assistant?style=flat-square) |
+| [AIDE](https://github.com/WecoAI/aideml) | AI-powered data science agent using tree search for solution exploration. Strong baseline on MLE-bench. | ![GitHub stars](https://img.shields.io/github/stars/WecoAI/aideml?style=flat-square) |
+| [OpenHands](https://github.com/All-Hands-AI/OpenHands) | Open-source AI software development agent. General-purpose coding agent adaptable to ML tasks. | ![GitHub stars](https://img.shields.io/github/stars/All-Hands-AI/OpenHands?style=flat-square) |
+| [SELA](https://github.com/geekan/MetaGPT/tree/main/metagpt/ext/sela) | Tree-Search Enhanced LLM Agents for AutoML using MCTS to expand search space. Part of MetaGPT. | ![GitHub stars](https://img.shields.io/github/stars/geekan/MetaGPT?style=flat-square) |
 
 ---
 
@@ -71,11 +73,17 @@ Agentic ML refers to autonomous AI systems that can plan, execute, and iterate o
 
 *Papers using tree search, MCTS, or structured planning for ML workflow optimization.*
 
+- **SELA: Tree-Search Enhanced LLM Agents for Automated Machine Learning** (2024) - [Paper](https://arxiv.org/abs/2410.17238) | [Code](https://github.com/geekan/MetaGPT/tree/main/metagpt/ext/sela)  
+  Leverages MCTS to expand the search space with insight pools. Foundation for many subsequent works.
+
 - **I-MCTS: Enhancing Agentic AutoML via Introspective Monte Carlo Tree Search** (2025) - [Paper](https://arxiv.org/abs/2502.14693) | [Code](https://github.com/jokieleung/I-MCTS)  
-  Introspective node expansion with hybrid LLM-estimated and actual performance rewards. 6% improvement over baselines.
+  Introspective node expansion with hybrid LLM-estimated and actual performance rewards. 6% improvement over SELA.
 
 - **PiML: Automated Machine Learning Workflow Optimization using LLM Agents** (AutoML 2025) - [Paper](https://openreview.net/forum?id=Nw1qBpsjZz)  
   Persistent iterative framework with adaptive memory and systematic debugging. 41% submissions above median on MLE-Bench.
+
+- **AutoMind: Adaptive Knowledgeable Agent for Automated Data Science** (2025) - [Paper](https://arxiv.org/abs/2506.10974)  
+  Features curated expert knowledge base, agentic knowledgeable tree search, and self-adaptive coding strategy.
 
 ### Domain-Specific Agentic ML
 
@@ -83,6 +91,12 @@ Agentic ML refers to autonomous AI systems that can plan, execute, and iterate o
 
 - **TS-Agent: Structured Agentic Workflows for Financial Time-Series Modeling** (2025) - [Paper](https://arxiv.org/abs/2508.13915)  
   Modular framework for financial forecasting with structured knowledge banks and iterative model selection/refinement.
+
+- **AgenticSciML: Collaborative Multi-Agent Systems for Emergent Discovery in Scientific ML** (2025) - [Paper](https://arxiv.org/abs/2511.07262)  
+  Specialized agents propose, critique, and refine SciML solutions. Up to 4 orders of magnitude error reduction over baselines.
+
+- **The AI Cosmologist: Agentic System for Automated Data Analysis** (2025) - [Paper](https://arxiv.org/abs/2504.03424)  
+  Automates cosmological data analysis from idea generation to research dissemination with specialized agents.
 
 ### LLM-Based ML Optimization
 
@@ -100,19 +114,15 @@ Agentic ML refers to autonomous AI systems that can plan, execute, and iterate o
 
 ---
 
-## Tutorials & Guides
-
-*Tutorials, blog posts, and guides on building agentic ML systems.*
-
-<!-- Add tutorials here -->
-
----
-
 ## Datasets & Benchmarks
 
 *Benchmarks and datasets for evaluating agentic ML systems.*
 
-<!-- Add datasets and benchmarks here -->
+| Benchmark | Description | Link |
+|-----------|-------------|------|
+| MLE-bench | Kaggle-based benchmark for ML engineering agents by OpenAI. 75 competitions testing full ML pipeline. | [GitHub](https://github.com/openai/mle-bench) |
+| AutoML-Agent Benchmark | 18 diverse datasets across tabular, CV, NLP, time-series, and graph tasks. | [Paper](https://openreview.net/forum?id=p1UBWkOvZm) |
+| GAIA | General AI Assistants benchmark testing real-world reasoning and tool use. | [Paper](https://arxiv.org/abs/2311.12983) |
 
 ---
 
