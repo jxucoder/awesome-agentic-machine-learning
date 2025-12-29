@@ -1,7 +1,5 @@
 # Awesome Agentic ML [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-> A curated list of awesome agentic machine learning projects, frameworks, and resources.
-
 Agentic ML refers to autonomous AI systems that can plan, execute, and iterate on machine learning workflows with minimal human intervention—from data preprocessing to model training, evaluation, and deployment.
 
 🤖 *This resource list is maintained with the help of [Claude Opus 4.5](https://www.anthropic.com/claude).*
