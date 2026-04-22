@@ -1,0 +1,153 @@
+topics:
+  - id: agentic-ml
+    name: "Awesome Agentic ML"
+    description: "Autonomous AI systems that plan, execute, and iterate on machine learning workflows with minimal human intervention"
+    grok_keywords: >-
+      agentic ML, AutoML agents, autonomous machine learning,
+      LLM ML engineering, ML workflow automation
+    arxiv_feeds:
+      - { name: "cs.AI", url: "https://rss.arxiv.org/rss/cs.AI" }
+      - { name: "cs.LG", url: "https://rss.arxiv.org/rss/cs.LG" }
+      - { name: "stat.ML", url: "https://rss.arxiv.org/rss/stat.ML" }
+    inclusion_criteria:
+      min_match: 3
+      checklist:
+        - "Goal-directed ML planning (selects or revises strategy for an ML objective)"
+        - "Tool-using execution across ML lifecycle stages (data prep, feature engineering, model training, evaluation, experimentation)"
+        - "Iterative feedback loop (uses metrics/errors/results to revise actions)"
+        - "Empirical ML outcome (benchmark, competition result, ablation, or measurable improvement)"
+    exclude:
+      - "Generic web/desktop/coding agents without meaningful ML workflow contribution"
+      - "Social-only announcements without a primary technical source (paper/repo/blog)"
+      - "Stale resources unless there is a substantive new release/update in the recent window"
+    max_entries_per_week: 5
+    github_project: null
+
+  - id: agentic-workflow-design
+    name: "Awesome Agentic Workflow Design"
+    description: "Architectural patterns, design principles, and engineering practices for building reliable, production-grade agentic systems"
+    grok_keywords: >-
+      agentic workflow design, agent architecture patterns, multi-agent orchestration,
+      agentic systems engineering, LLM agent design patterns, production agents
+    arxiv_feeds:
+      - { name: "cs.AI", url: "https://rss.arxiv.org/rss/cs.AI" }
+      - { name: "cs.SE", url: "https://rss.arxiv.org/rss/cs.SE" }
+      - { name: "cs.MA", url: "https://rss.arxiv.org/rss/cs.MA" }
+    inclusion_criteria:
+      min_match: 3
+      checklist:
+        - "Architectural guidance for goal-directed agent systems (patterns, orchestration, state management)"
+        - "Tool-use and execution design across agent lifecycle stages (planning, execution, feedback, recovery)"
+        - "Iterative refinement practices (evaluation loops, human-in-the-loop, observability)"
+        - "Empirical or practical grounding (case studies, benchmarks, production deployment evidence)"
+    exclude:
+      - "Generic LLM tutorials without agentic design focus"
+      - "Social-only announcements without a primary technical source (paper/repo/blog)"
+      - "Stale resources unless there is a substantive new release/update in the recent window"
+    max_entries_per_week: 2
+    github_project: null
+
+  - id: top-claude-tips
+    name: "Top Claude Tips"
+    description: "High-signal practical tips, techniques, and workflows for getting the most out of Claude week over week"
+    grok_keywords: >-
+      Claude tips, Claude prompting, Claude workflow, Claude best practices,
+      Claude techniques, Claude productivity, how to use Claude
+    arxiv_feeds:
+      - { name: "cs.AI", url: "https://rss.arxiv.org/rss/cs.AI" }
+      - { name: "cs.HC", url: "https://rss.arxiv.org/rss/cs.HC" }
+    inclusion_criteria:
+      min_match: 3
+      checklist:
+        - "Practical, actionable tip or technique for using Claude more effectively"
+        - "Grounded in real usage evidence (community post, demo, benchmark, or documented workflow)"
+        - "Applicable to a broad audience (not highly domain-specific or niche)"
+        - "Novel or non-obvious — not a basic feature already in official docs"
+    exclude:
+      - "Generic AI hype without concrete Claude-specific technique"
+      - "Outdated tips superseded by newer Claude capabilities"
+      - "Social-only announcements without a primary source (post/repo/demo)"
+    max_entries_per_week: 3
+    github_project: null
+
+  - id: harness-engineering
+    name: "Harness Engineering"
+    description: "Design and implementation of agent harnesses — the scaffolding, execution environments, and control infrastructure that run, evaluate, and constrain AI agents"
+    grok_keywords: >-
+      agent harness, agent scaffold, agent execution framework, LLM agent infrastructure,
+      agent runtime, agent evaluation harness, AI agent test harness, agent loop design,
+      agent orchestration infrastructure, agentic scaffolding
+    arxiv_feeds:
+      - { name: "cs.AI", url: "https://rss.arxiv.org/rss/cs.AI" }
+      - { name: "cs.SE", url: "https://rss.arxiv.org/rss/cs.SE" }
+      - { name: "cs.PL", url: "https://rss.arxiv.org/rss/cs.PL" }
+      - { name: "cs.MA", url: "https://rss.arxiv.org/rss/cs.MA" }
+    inclusion_criteria:
+      min_match: 3
+      checklist:
+        - "Defines or implements the execution loop, scaffolding, or runtime environment that hosts an AI agent"
+        - "Manages tool dispatch, context handling, state management, or safety constraints at the harness layer"
+        - "Evaluates or benchmarks agent behavior through controlled harness-mediated interactions"
+        - "Empirical or production evidence of harness design improving reliability, safety, or performance"
+    exclude:
+      - "Agent application logic unrelated to the hosting infrastructure (e.g., pure prompt engineering)"
+      - "Generic CI/CD or test frameworks not specific to AI agent execution"
+      - "Social-only announcements without a primary technical source (paper/repo/blog)"
+      - "Stale resources unless there is a substantive new release/update in the recent window"
+    max_entries_per_week: 3
+    github_project: null
+
+  - id: rlhf-agentic
+    name: "RLHF in Agentic Systems"
+    description: "Reinforcement learning from human feedback techniques and their application in building aligned, adaptive agentic AI systems"
+    grok_keywords: >-
+      RLHF agentic, reinforcement learning human feedback agents,
+      RLAIF agentic systems, reward modeling agents, Constitutional AI agents,
+      human-in-the-loop RL, preference learning autonomous agents
+    arxiv_feeds:
+      - { name: "cs.AI", url: "https://rss.arxiv.org/rss/cs.AI" }
+      - { name: "cs.LG", url: "https://rss.arxiv.org/rss/cs.LG" }
+      - { name: "cs.CL", url: "https://rss.arxiv.org/rss/cs.CL" }
+      - { name: "cs.MA", url: "https://rss.arxiv.org/rss/cs.MA" }
+    inclusion_criteria:
+      min_match: 3
+      checklist:
+        - "Applies RLHF, RLAIF, reward modeling, or preference learning in an agentic or autonomous setting"
+        - "Goal-directed agent behavior shaped by human feedback signals or learned reward models"
+        - "Iterative alignment loop (human ratings, preference comparisons, or AI-generated feedback refine agent policy)"
+        - "Empirical outcome (benchmark, task success rate, safety evaluation, or measurable alignment improvement)"
+    exclude:
+      - "RLHF applied only to static language model fine-tuning without agentic deployment"
+      - "Social-only announcements without a primary technical source (paper/repo/blog)"
+      - "Generic RL tutorials without human feedback or agentic alignment focus"
+      - "Stale resources unless there is a substantive new release/update in the recent window"
+    max_entries_per_week: 3
+    github_project: null
+
+  - id: transformers-beyond-nlp
+    name: "Transformers Beyond NLP"
+    description: "Applications of the transformer architecture outside natural language processing — spanning biology, genomics, protein structure, chemistry, computer vision, time-series forecasting, and physics"
+    grok_keywords: >-
+      transformer biology, protein language model, vision transformer applications,
+      transformer time series, transformer genomics, transformer materials science,
+      transformer weather forecasting, transformer drug discovery, cross-domain transformer
+    arxiv_feeds:
+      - { name: "cs.LG", url: "https://rss.arxiv.org/rss/cs.LG" }
+      - { name: "cs.CV", url: "https://rss.arxiv.org/rss/cs.CV" }
+      - { name: "q-bio.QM", url: "https://rss.arxiv.org/rss/q-bio.QM" }
+      - { name: "physics.ao-ph", url: "https://rss.arxiv.org/rss/physics.ao-ph" }
+      - { name: "cond-mat.mtrl-sci", url: "https://rss.arxiv.org/rss/cond-mat.mtrl-sci" }
+    inclusion_criteria:
+      min_match: 3
+      checklist:
+        - "Applies transformer architecture (self-attention, positional encoding, or encoder/decoder design) to a non-NLP domain"
+        - "Addresses a domain-specific task with measurable performance (structure prediction, property forecasting, classification, generation)"
+        - "Iterative modeling or training loop grounded in domain data (sequences, graphs, spectra, images, signals)"
+        - "Empirical outcome demonstrating advantage of transformer approach (benchmark result, ablation, competition result, or downstream application)"
+    exclude:
+      - "Pure NLP or language model applications (even if the model architecture is novel)"
+      - "Vision-language or multimodal models where the primary contribution is NLP/captioning, not a non-language domain task"
+      - "Social-only announcements without a primary technical source (paper/repo/blog)"
+      - "Stale resources unless there is a substantive new release/update in the recent window"
+    max_entries_per_week: 4
+    github_project: null

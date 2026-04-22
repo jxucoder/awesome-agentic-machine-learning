@@ -1,57 +1,39 @@
-# Research Topics
+# Awesome Agentic ML [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-Automated research agent system that scouts, curates, and maintains awesome lists across multiple topics using AI-powered signal collection and curation.
+Agentic ML refers to autonomous AI systems that can plan, execute, and iterate on machine learning workflows with minimal human intervention—from data preprocessing to model training, evaluation, and deployment.
 
-## How It Works
+🤖 *This resource list is maintained with the help of [Claude](https://www.anthropic.com/claude) by Anthropic.*
 
-Each topic has its own curated awesome list maintained by a weekly Research Assistant Agent:
+---
 
-1. **Grok Scout** — collects recent social signals via xAI API
-2. **arXiv Scout** — pulls recent papers from topic-specific RSS feeds
-3. **Claude Curation** — evaluates candidates against topic-specific criteria using Anthropic Claude
+## Scope: What Counts as Agentic ML?
 
-## Topics
+A resource belongs in this list when it demonstrates autonomous, closed-loop progress on machine learning workflows (not just general-purpose agent behavior).
 
-| Topic | Description |
-|-------|-------------|
-| [Agentic ML](topics/agentic-ml/) | Autonomous AI systems for ML workflows |
-| [Agentic Workflow Design](topics/agentic-workflow-design/) | Patterns, principles, and practices for production-grade agentic systems |
-| [Top Claude Plugins](topics/top-claude-plugins/) | High-signal Claude plugins, MCP servers, and integrations |
-| [RLHF in Agentic Systems](topics/rlhf-agentic/) | Reinforcement learning from human feedback techniques and their use in aligned, adaptive agentic AI |
-| [Harness Engineering](topics/harness-engineering/) | Scaffolding, execution environments, and control infrastructure for running and evaluating AI agents |
-| [Transformers Beyond NLP](topics/transformers-beyond-nlp/) | Transformer architecture applications outside language processing — biology, genomics, vision, chemistry, time-series, and physics |
+**Inclusion checklist (meet at least 3 of 4):**
 
-## Prerequisites
+- Goal-directed ML planning (selects or revises strategy for an ML objective)
+- Tool-using execution across ML lifecycle stages (data prep, feature engineering, model training, evaluation, experimentation)
+- Iterative feedback loop (uses metrics/errors/results to revise actions)
+- Empirical ML outcome (benchmark, competition result, ablation, or measurable improvement)
 
-| Requirement | Used by | Notes |
-|-------------|---------|-------|
-| `ANTHROPIC_API_KEY` | `add-topic.sh`, weekly curation | Claude deduplication and curation |
-| `XAI_API_KEY` | Weekly workflow (Grok Scout) | GitHub repository secret |
-| `XAI_BASE_URL` | Weekly workflow | Repository variable, default: `https://api.x.ai` |
-| `GROK_MODEL` | Weekly workflow | Repository variable, default: `grok-4-1-fast-reasoning` |
-| [`gh` CLI](https://cli.github.com/) | `add-topic.sh` | For GitHub Project board creation |
+**Exclude or deprioritize:**
 
-For local use, set `ANTHROPIC_API_KEY` in your environment before running `add-topic.sh`.
+- Generic web/desktop/coding agents without meaningful ML workflow contribution
+- Social-only announcements without a primary technical source (paper/repo/blog)
+- Stale resources unless there is a substantive new release/update in the recent window
 
-## Adding a Topic
+---
 
-```bash
-./add-topic.sh "Your Topic Name"
-./add-topic.sh "Your Topic Name" --max-entries 3   # limit weekly additions (default: 5)
-```
+## Research Assistant Agent
 
-The CLI will:
-- Check for overlap with existing topics
-- Generate topic-specific search keywords, RSS feeds, and inclusion criteria
-- Create a GitHub Project board for tracking
-- Scaffold the topic folder with a starter README
+This repository runs a weekly **Research Assistant Agent** via GitHub Actions to scout and triage potential additions.
 
-## Configuration
+- Workflow: `.github/workflows/weekly-resource-research.yml`
+- Primary curation model: `gpt-5.3-codex` with `xhigh` effort
+- Default Grok scout model: `grok-4-1-fast-reasoning` (override with `GROK_MODEL` repository variable)
+- Signal sources: xAI Grok social scout + arXiv RSS scout + Codex curation pass
 
-Topics are configured in [`topics.yml`](topics.yml). Each topic defines:
-- Search keywords for social signal scouting
-- arXiv RSS feed categories
-- Inclusion/exclusion criteria for curation
 **Behavior:**
 
 - If high-confidence additions are found, the agent updates `README.md` and opens a draft PR with a supporting suggestion log.
@@ -92,7 +74,6 @@ Topics are configured in [`topics.yml`](topics.yml). Each topic defines:
 | [EvoAgentX](https://github.com/EvoAgentX/EvoAgentX) | Open-source framework for building, evaluating, and evolving LLM-based agentic workflows. EMNLP 2025. | ![GitHub stars](https://img.shields.io/github/stars/EvoAgentX/EvoAgentX?style=flat-square) |
 | [Karpathy](https://github.com/K-Dense-AI/karpathy) | Agentic ML Engineer using Claude Code SDK and Google ADK. By K-Dense. | ![GitHub stars](https://img.shields.io/github/stars/K-Dense-AI/karpathy?style=flat-square) |
 | [K-Dense Web](https://k-dense.ai/) | Autonomous AI Scientist platform with dual-loop multi-agent system for research, coding, and ML. | - |
-| [LangGraph ML Flows](https://blog.langchain.dev/langgraph-ml-workflows/) | LangGraph patterns for agentic ML experimentation loops (hyperparameter tuning, evaluation, and iterative refinement). | - |
 | [OpenEvolve](https://github.com/codelion/openevolve) | Open-source implementation of Google DeepMind's AlphaEvolve for evolutionary code optimization. | ![GitHub stars](https://img.shields.io/github/stars/codelion/openevolve?style=flat-square) |
 
 ---
@@ -112,7 +93,6 @@ Topics are configured in [`topics.yml`](topics.yml). Each topic defines:
 | [Data Interpreter](https://github.com/geekan/MetaGPT) | LLM agent for data science using hierarchical graph modeling and programmable node generation. Part of MetaGPT. ICLR 2025. | ![GitHub stars](https://img.shields.io/github/stars/geekan/MetaGPT?style=flat-square) |
 | [DS-Agent](https://github.com/guosyjlu/DS-Agent) | Automated data science agent using case-based reasoning from Kaggle. ICML 2024. | ![GitHub stars](https://img.shields.io/github/stars/guosyjlu/DS-Agent?style=flat-square) |
 | [FM Agent](https://github.com/baidubce/FM-Agent) | Baidu's foundation model agent for ML engineering tasks. | ![GitHub stars](https://img.shields.io/github/stars/baidubce/FM-Agent?style=flat-square) |
-| [FeatureForge](https://github.com/featureforge-ai/featureforge) | Agentic feature engineering toolkit automating feature generation/extraction with reported performance gains. | ![GitHub stars](https://img.shields.io/github/stars/featureforge-ai/featureforge?style=flat-square) |
 | [InternAgent](https://github.com/Alpha-Innovator/InternAgent) | ML engineering agent with DeepSeek-R1 integration. | ![GitHub stars](https://img.shields.io/github/stars/Alpha-Innovator/InternAgent?style=flat-square) |
 | [LADS (LightAutoDS)](https://github.com/sb-ai-lab/LADS) | Multi-AutoML agentic system combining LLM code generation with AutoGluon, LightAutoML, and FEDOT. | ![GitHub stars](https://img.shields.io/github/stars/sb-ai-lab/LADS?style=flat-square) |
 | [MLE-STAR](https://research.google/blog/mle-star-a-state-of-the-art-machine-learning-engineering-agents/) | Google's ML engineering agent using web search and targeted code block refinement. Built with ADK. | - |
@@ -172,9 +152,6 @@ Topics are configured in [`topics.yml`](topics.yml). Each topic defines:
 - **AutoML-Agent: A Multi-Agent LLM Framework for Full-Pipeline AutoML** (ICML 2025) - [Paper](https://openreview.net/forum?id=p1UBWkOvZm) | [Code](https://github.com/DeepAuto-AI/automl-agent)  
   Multi-agent system with data, model, and operation agents for full-pipeline automation.
 
-- **AutoAgents: Generating Specialized Agents for End-to-End Machine Learning Pipelines** (2024) - [Paper](https://arxiv.org/abs/2410.03521)
-  Dynamically composes specialized agents across data prep, training, and evaluation stages, with reported AutoML task speedups.
-
 - **LightAutoDS-Tab: Multi-AutoML Agentic System for Tabular Data** (2025) - [Paper](https://arxiv.org/abs/2507.13413) | [Code](https://github.com/sb-ai-lab/LADS)  
   Combines LLM-based code generation with multiple AutoML tools (AutoGluon, LightAutoML, FEDOT).
 
@@ -220,9 +197,6 @@ Topics are configured in [`topics.yml`](topics.yml). Each topic defines:
 
 - **PiML: Automated Machine Learning Workflow Optimization using LLM Agents** (AutoML 2025) - [Paper](https://openreview.net/forum?id=Nw1qBpsjZz)
   Persistent iterative framework with adaptive memory and systematic debugging.
-
-- **RF-Agent: Automated Reward Function Design via Language Agent Tree Search** (2026) - [Paper](https://arxiv.org/abs/2602.23876) | [Code](https://github.com/deng-ai-lab/RF-Agent)
-  Frames reward-function design as sequential decision-making with MCTS-guided language agents, showing gains across 17 low-level control tasks.
 
 - **SELA: Tree-Search Enhanced LLM Agents for Automated Machine Learning** (2024) - [Paper](https://arxiv.org/abs/2410.17238) | [Code](https://github.com/geekan/MetaGPT/tree/main/metagpt/ext/sela)  
   Leverages MCTS to expand the search space with insight pools.
@@ -380,3 +354,5 @@ When proposing additions, include a short note on which inclusion criteria the i
 ## License
 
 [![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
+
+To the extent possible under law, the authors have waived all copyright and related rights to this work.
