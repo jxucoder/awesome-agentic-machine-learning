@@ -299,29 +299,41 @@ jobs:
       - name: Build Codex prompt
         run: |
           cat > codex-weekly-prompt.md <<'EOF'
-          You are curating an awesome list for agentic machine learning.
+          You are the weekly Research Assistant Agent for this repository.
 
-          Task:
-          1) Read README.md in this repository.
-          2) Use the Grok social scout context from `grok-social-signals.md`.
-          3) Use arXiv RSS context from `arxiv-rss-signals.md`.
-          4) Apply this inclusion checklist (resource should satisfy at least 3 of 4):
-             - goal-directed ML planning
-             - tool-using ML lifecycle execution (data prep/feature engineering/training/evaluation/experimentation)
-             - iterative feedback loop from metrics/errors/results
-             - empirical ML outcome (benchmark/ablation/competition/measurable gain)
-          5) Exclude or deprioritize:
-             - generic web/desktop/coding agents without meaningful ML workflow contribution
-             - social-only announcements lacking a primary technical source (paper/repo/blog)
-             - stale resources unless there is a substantive recent release/update
-          6) Propose only high-signal items that are NOT already present in README.md.
-          7) If additions are warranted, directly update README.md in this workspace:
-             - add entries in the correct section(s)
-             - preserve existing markdown style and ordering conventions
-             - keep descriptions concise and evidence-backed
-             - do not modify unrelated sections
-          8) It is completely acceptable to recommend zero additions this week.
-             Do not force suggestions when quality is low or novelty is weak.
+          Goal:
+          - Curate only high-signal, recent resources for agentic machine learning.
+          - It is valid to add nothing this week when evidence is weak.
+
+          Inputs:
+          1) README.md in this repository (current curated list and scope rules)
+          2) `grok-social-signals.md` (social scout leads)
+          3) `arxiv-rss-signals.md` (recent paper leads)
+
+          Required process:
+          1) Read README.md first.
+          2) Use both scout files as seed leads.
+          3) Use live web search to validate and expand leads before deciding.
+          4) Ensure each proposed item has a primary technical source URL (paper/repo/blog) and recent evidence.
+          5) Exclude duplicates already present in README.md.
+          6) Prefer resources from the last 14 days, unless an older resource has a substantive new update.
+
+          Inclusion checklist (resource should satisfy at least 3 of 4):
+          - goal-directed ML planning
+          - tool-using ML lifecycle execution (data prep/feature engineering/training/evaluation/experimentation)
+          - iterative feedback loop from metrics/errors/results
+          - empirical ML outcome (benchmark/ablation/competition/measurable gain)
+
+          Exclude or deprioritize:
+          - generic web/desktop/coding agents without meaningful ML workflow contribution
+          - social-only announcements lacking a primary technical source (paper/repo/blog)
+          - stale resources unless there is a substantive recent release/update
+
+          If additions are warranted, directly update README.md in this workspace:
+          - add entries in the correct section(s)
+          - preserve existing markdown style and ordering conventions
+          - keep descriptions concise and evidence-backed
+          - do not modify unrelated sections
 
           Output rules:
           - First line MUST be exactly one of:
@@ -329,9 +341,9 @@ jobs:
             RESULT: FOUND
           - If RESULT: NONE, add one short sentence explaining why no additions are needed.
           - If RESULT: FOUND, output concise markdown with:
-            - a short "Scan summary"
+            - a short "Scan summary" (including that web search was used)
             - up to 8 candidate items total
-            - for each item: title, URL, one-line rationale, and which checklist criteria it satisfies
+            - for each item: title, primary URL, one-line rationale, checklist criteria satisfied, and 1 supporting evidence URL
             - a short "README updates made" section describing what was inserted
           EOF
 
@@ -354,6 +366,7 @@ jobs:
           output-file: weekly-suggestions.md
           model: gpt-5.3-codex
           effort: xhigh
+          codex-args: '["-c", "web_search=\"live\""]'
           sandbox: workspace-write
 
       - name: Check if suggestions were found

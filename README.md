@@ -32,7 +32,7 @@ This repository runs a weekly **Research Assistant Agent** via GitHub Actions to
 - Workflow: `.github/workflows/weekly-resource-research.yml`
 - Primary curation model: `gpt-5.3-codex` with `xhigh` effort
 - Default Grok scout model: `grok-4-1-fast-reasoning` (override with `GROK_MODEL` repository variable)
-- Signal sources: xAI Grok social scout + arXiv RSS scout + Codex curation pass
+- Signal sources: xAI Grok social scout + arXiv RSS scout + Codex curation pass with live web search validation
 
 **Behavior:**
 
@@ -72,6 +72,7 @@ This repository runs a weekly **Research Assistant Agent** via GitHub Actions to
 | [AlphaEvolve](https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/) | Google DeepMind's evolutionary coding agent for scientific and algorithmic discovery using Gemini. | - |
 | [AutoGluon](https://github.com/autogluon/autogluon) | Open-source AutoML toolkit by Amazon with foundational models and LLM agents. | ![GitHub stars](https://img.shields.io/github/stars/autogluon/autogluon?style=flat-square) |
 | [EvoAgentX](https://github.com/EvoAgentX/EvoAgentX) | Open-source framework for building, evaluating, and evolving LLM-based agentic workflows. EMNLP 2025. | ![GitHub stars](https://img.shields.io/github/stars/EvoAgentX/EvoAgentX?style=flat-square) |
+| [EvoMaster](https://github.com/sjtu-sai-agents/EvoMaster) | Foundational auto-research agent framework for self-evolving scientific agents, including ML-Master and MLE-bench Lite workflows. | ![GitHub stars](https://img.shields.io/github/stars/sjtu-sai-agents/EvoMaster?style=flat-square) |
 | [Karpathy](https://github.com/K-Dense-AI/karpathy) | Agentic ML Engineer using Claude Code SDK and Google ADK. By K-Dense. | ![GitHub stars](https://img.shields.io/github/stars/K-Dense-AI/karpathy?style=flat-square) |
 | [K-Dense Web](https://k-dense.ai/) | Autonomous AI Scientist platform with dual-loop multi-agent system for research, coding, and ML. | - |
 | [LangGraph ML Flows](https://blog.langchain.dev/langgraph-ml-workflows/) | LangGraph patterns for agentic ML experimentation loops (hyperparameter tuning, evaluation, and iterative refinement). | - |
@@ -86,8 +87,10 @@ This repository runs a weekly **Research Assistant Agent** via GitHub Actions to
 | Project | Description | Stars |
 |---------|-------------|-------|
 | [Agent Laboratory](https://github.com/SamuelSchmidgall/AgentLaboratory) | Autonomous research framework with specialized agents for literature review, experimentation, and report writing. | ![GitHub stars](https://img.shields.io/github/stars/SamuelSchmidgall/AgentLaboratory?style=flat-square) |
+| [AIBuildAI](https://github.com/aibuildai/AI-Build-AI) | Hierarchical agent for automatically building AI models from task descriptions and training data. | ![GitHub stars](https://img.shields.io/github/stars/aibuildai/AI-Build-AI?style=flat-square) |
 | [AIDE](https://github.com/WecoAI/aideml) | AI-powered data science agent using tree search for solution exploration. | ![GitHub stars](https://img.shields.io/github/stars/WecoAI/aideml?style=flat-square) |
 | [AIRA-dojo](https://github.com/facebookresearch/aira-dojo) | Meta's AI research agents using search policies (Greedy, MCTS, Evolutionary). | ![GitHub stars](https://img.shields.io/github/stars/facebookresearch/aira-dojo?style=flat-square) |
+| [AiScientist](https://github.com/AweAI-Team/AiScientist) | File-as-Bus long-horizon ML research agent for paper reproduction and Kaggle-style MLE workflows. | ![GitHub stars](https://img.shields.io/github/stars/AweAI-Team/AiScientist?style=flat-square) |
 | [AutoGluon Assistant](https://github.com/autogluon/autogluon-assistant) | Multi-agent system for end-to-end multimodal ML automation. Also known as MLZero. | ![GitHub stars](https://img.shields.io/github/stars/autogluon/autogluon-assistant?style=flat-square) |
 | [AutoMind](https://github.com/zjunlp/AutoMind) | Adaptive agent with expert knowledge base from 455 Kaggle competitions and tree search. By ZJU NLP. | ![GitHub stars](https://img.shields.io/github/stars/zjunlp/AutoMind?style=flat-square) |
 | [AutoML-Agent](https://github.com/DeepAuto-AI/automl-agent) | Multi-Agent LLM Framework for Full-Pipeline AutoML. | ![GitHub stars](https://img.shields.io/github/stars/DeepAuto-AI/automl-agent?style=flat-square) |
@@ -95,6 +98,7 @@ This repository runs a weekly **Research Assistant Agent** via GitHub Actions to
 | [DS-Agent](https://github.com/guosyjlu/DS-Agent) | Automated data science agent using case-based reasoning from Kaggle. ICML 2024. | ![GitHub stars](https://img.shields.io/github/stars/guosyjlu/DS-Agent?style=flat-square) |
 | [FM Agent](https://github.com/baidubce/FM-Agent) | Baidu's foundation model agent for ML engineering tasks. | ![GitHub stars](https://img.shields.io/github/stars/baidubce/FM-Agent?style=flat-square) |
 | [FeatureForge](https://github.com/featureforge-ai/featureforge) | Agentic feature engineering toolkit automating feature generation/extraction with reported performance gains. | ![GitHub stars](https://img.shields.io/github/stars/featureforge-ai/featureforge?style=flat-square) |
+| [FOREAGENT](https://github.com/zjunlp/predict-before-execute) | Predict-then-Verify ML agent using run-free preference prediction to reduce expensive execution loops. | ![GitHub stars](https://img.shields.io/github/stars/zjunlp/predict-before-execute?style=flat-square) |
 | [InternAgent](https://github.com/Alpha-Innovator/InternAgent) | ML engineering agent with DeepSeek-R1 integration. | ![GitHub stars](https://img.shields.io/github/stars/Alpha-Innovator/InternAgent?style=flat-square) |
 | [LADS (LightAutoDS)](https://github.com/sb-ai-lab/LADS) | Multi-AutoML agentic system combining LLM code generation with AutoGluon, LightAutoML, and FEDOT. | ![GitHub stars](https://img.shields.io/github/stars/sb-ai-lab/LADS?style=flat-square) |
 | [MLE-STAR](https://research.google/blog/mle-star-a-state-of-the-art-machine-learning-engineering-agents/) | Google's ML engineering agent using web search and targeted code block refinement. Built with ADK. | - |
@@ -137,6 +141,18 @@ This repository runs a weekly **Research Assistant Agent** via GitHub Actions to
 - **MLE-Dojo: Interactive RL Environment for Machine Learning Engineering** (2025) - [Paper](https://arxiv.org/abs/2505.07782)
   Transforms MLE-bench into a Gym-style RL environment with 200+ Kaggle competitions, enabling agent training via supervised fine-tuning and reinforcement learning.
 
+- **Agent^2 RL-Bench: Can LLM Agents Engineer Agentic RL Post-Training?** (2026) - [Paper](https://arxiv.org/abs/2604.10547) | [Code](https://github.com/microsoft/RD-Agent/blob/main/rdagent/scenarios/rl/autorl_bench/README.md)
+  Benchmark for agents that autonomously design, implement, debug, and execute RL post-training pipelines.
+
+- **Ambig-DS: A Benchmark for Task-Framing Ambiguity in Data-Science Agents** (2026) - [Paper](https://arxiv.org/abs/2605.09698) | [Data](https://huggingface.co/datasets/anonymous222bit/Ambig-DS-T)
+  Diagnostic suites for silent target and objective misframing in data-science agents, built on DSBench and MLE-bench.
+
+- **DSGym: A Holistic Framework for Evaluating and Training Data Science Agents** (2026) - [Paper](https://arxiv.org/abs/2601.16344) | [Code](https://github.com/fannie1208/DSGym)
+  Modular execution framework and task suite for evaluating and training data science agents in self-contained environments.
+
+- **FML-bench: A Controlled Study of AI Research Agent Strategies from the Perspective of Search Dynamics** (2026) - [Paper](https://arxiv.org/abs/2605.17373) | [Code](https://github.com/qrzou/FML-bench)
+  Benchmark with 18 fundamental ML research tasks and process-level metrics for studying agent search dynamics.
+
 ### Autonomous Data Science Agents
 
 *LLM agents for end-to-end data science automation with case-based reasoning and knowledge retrieval.*
@@ -147,9 +163,18 @@ This repository runs a weekly **Research Assistant Agent** via GitHub Actions to
 - **Agent Laboratory: Using LLM Agents as Research Assistants** (2025) - [Paper](https://arxiv.org/abs/2501.04227) | [Code](https://github.com/SamuelSchmidgall/AgentLaboratory)
   End-to-end autonomous research framework with specialized agents (PhD, Postdoc, ML Engineer, Professor) for literature review, experimentation, and report writing. 84% cost reduction vs. prior methods.
 
+- **DataMaster: Data-Centric Autonomous AI Research** (2026) - [Paper](https://arxiv.org/abs/2605.10906)
+  Data-agent framework using tree-structured search, shared data pools, and cumulative memory to optimize datasets through downstream feedback.
+
 ### Multi-Agent Systems
 
 *Frameworks using multiple specialized agents for end-to-end ML pipelines.*
+
+- **AIBuildAI: An AI Agent for Automatically Building AI Models** (2026) - [Paper](https://arxiv.org/abs/2604.14455) | [Code](https://github.com/aibuildai/AI-Build-AI)
+  Hierarchical manager, designer, coder, and tuner agents for end-to-end AI model development on MLE-bench tasks.
+
+- **A Multi-Agent Framework for Code-Guided, Modular, and Verifiable Automated Machine Learning** (2026) - [Paper](https://arxiv.org/abs/2602.13937)
+  Introduces iML with code-guided planning, modular preprocessing/modeling components, and contract-based self-correction.
 
 - **AutoML-Agent: A Multi-Agent LLM Framework for Full-Pipeline AutoML** (ICML 2025) - [Paper](https://openreview.net/forum?id=p1UBWkOvZm) | [Code](https://github.com/DeepAuto-AI/automl-agent)  
   Multi-agent system with data, model, and operation agents for full-pipeline automation.
@@ -178,6 +203,9 @@ This repository runs a weekly **Research Assistant Agent** via GitHub Actions to
 - **MetaAgent: Automatically Constructing Multi-Agent Systems Based on Finite State Machines** (ICML 2025) - [Paper](https://arxiv.org/abs/2507.22606)
   FSM-based framework that auto-generates multi-agent systems with state traceback for self-correction. Matches or exceeds human-designed systems.
 
+- **Toward Autonomous Long-Horizon Engineering for ML Research** (2026) - [Paper](https://arxiv.org/abs/2604.13018) | [Code](https://github.com/AweAI-Team/AiScientist)
+  AiScientist coordinates specialist agents through durable workspace artifacts for paper reproduction and MLE competition workflows.
+
 ### Search & Planning Methods
 
 *Papers using tree search, MCTS, or structured planning for ML workflow optimization.*
@@ -185,8 +213,14 @@ This repository runs a weekly **Research Assistant Agent** via GitHub Actions to
 - **AI Research Agents for Machine Learning** (2025) - [Paper](https://arxiv.org/abs/2507.02554) | [Code](https://github.com/facebookresearch/aira-dojo)  
   Formalizes AI research agents as search policies with operators. Compares Greedy, MCTS, and Evolutionary strategies.
 
+- **AIRA_2: Overcoming Bottlenecks in AI Research Agents** (2026) - [Paper](https://arxiv.org/abs/2603.26499)
+  Uses asynchronous multi-GPU workers, hidden consistent evaluation, and dynamic ReAct operators to scale MLE-bench-30 search.
+
 - **AutoMind: Adaptive Knowledgeable Agent for Automated Data Science** (2025) - [Paper](https://arxiv.org/abs/2506.10974) | [Code](https://github.com/zjunlp/AutoMind)  
   Features curated expert knowledge base from 455 Kaggle competitions, agentic knowledgeable tree search, and self-adaptive coding strategy.
+
+- **Can We Predict Before Executing Machine Learning Agents?** (ACL 2026) - [Paper](https://arxiv.org/abs/2601.05930) | [Code](https://github.com/zjunlp/predict-before-execute)
+  FOREAGENT uses a Predict-then-Verify loop to prune expensive ML execution, accelerating convergence while improving outcomes.
 
 - **I-MCTS: Enhancing Agentic AutoML via Introspective Monte Carlo Tree Search** (2025) - [Paper](https://arxiv.org/abs/2502.14693) | [Code](https://github.com/jokieleung/I-MCTS)  
   Introspective node expansion with hybrid LLM-estimated and actual performance rewards.
@@ -202,6 +236,9 @@ This repository runs a weekly **Research Assistant Agent** via GitHub Actions to
 
 - **PiML: Automated Machine Learning Workflow Optimization using LLM Agents** (AutoML 2025) - [Paper](https://openreview.net/forum?id=Nw1qBpsjZz)
   Persistent iterative framework with adaptive memory and systematic debugging.
+
+- **Reasoning as Gradient: Scaling MLE Agents Beyond Tree Search** (2026) - [Paper](https://arxiv.org/abs/2603.01692) | [Code](https://github.com/microsoft/RD-Agent)
+  Introduces Gome, which maps diagnostic reasoning, success memory, and multi-trace execution into a directed optimization process for MLE agents.
 
 - **RF-Agent: Automated Reward Function Design via Language Agent Tree Search** (2026) - [Paper](https://arxiv.org/abs/2602.23876) | [Code](https://github.com/deng-ai-lab/RF-Agent)
   Frames reward-function design as sequential decision-making with MCTS-guided language agents, showing gains across 17 low-level control tasks.
@@ -240,6 +277,12 @@ This repository runs a weekly **Research Assistant Agent** via GitHub Actions to
 
 - **ML-Agent: Reinforcing LLM Agents for Autonomous Machine Learning Engineering** (2025) - [Paper](https://arxiv.org/abs/2505.23723)
   Applies online reinforcement learning to train LLM agents for ML tasks with exploration-enriched fine-tuning and step-wise RL.
+
+- **AceGRPO: Adaptive Curriculum Enhanced Group Relative Policy Optimization for Autonomous Machine Learning Engineering** (2026) - [Paper](https://arxiv.org/abs/2602.07906) | [Code](https://github.com/yuzhu-cai/AceGRPO)
+  Reinforcement learning method for MLE agents using evolving execution traces and learnability-guided adaptive sampling.
+
+- **Synthetic Sandbox for Training Machine Learning Engineering Agents** (2026) - [Paper](https://arxiv.org/abs/2604.04872)
+  SandMLE generates micro-scale synthetic MLE environments to make on-policy trajectory-wise RL practical for ML engineering agents.
 
 - **CAAFE: Context-Aware Automated Feature Engineering** (NeurIPS 2024) - [Paper](https://arxiv.org/abs/2305.03403)
   LLM-driven automated feature engineering pipeline that generates and executes code for new features using dataset context.
@@ -293,9 +336,13 @@ This repository runs a weekly **Research Assistant Agent** via GitHub Actions to
 
 | Benchmark | Description | Link |
 |-----------|-------------|------|
+| Agent^2 RL-Bench | Benchmark for agents that autonomously engineer RL post-training loops for foundation models. | [Paper](https://arxiv.org/abs/2604.10547) \| [GitHub](https://github.com/microsoft/RD-Agent/blob/main/rdagent/scenarios/rl/autorl_bench/README.md) |
+| Ambig-DS | Diagnostic suites for target and objective ambiguity in data-science agents. | [Paper](https://arxiv.org/abs/2605.09698) \| [Data](https://huggingface.co/datasets/anonymous222bit/Ambig-DS-T) |
 | AutoML-Agent Benchmark | 18 diverse datasets across tabular, CV, NLP, time-series, and graph tasks. | [Paper](https://openreview.net/forum?id=p1UBWkOvZm) |
 | DataSciBench | Comprehensive data science benchmark with TFC framework for LLM evaluation. | [Paper](https://arxiv.org/abs/2502.13897) \| [GitHub](https://github.com/THUDM/DataSciBench) |
 | DS-1000 | 1,000 data science code generation problems from StackOverflow across 7 libraries. | [Paper](https://arxiv.org/abs/2211.11501) |
+| DSGym | Modular task suite and execution environment for evaluating and training data science agents. | [Paper](https://arxiv.org/abs/2601.16344) \| [GitHub](https://github.com/fannie1208/DSGym) |
+| FML-bench | 18 fundamental ML research tasks with process-level metrics for agent search dynamics. | [Paper](https://arxiv.org/abs/2605.17373) \| [GitHub](https://github.com/qrzou/FML-bench) |
 | GAIA | General AI Assistants benchmark testing real-world reasoning and tool use. | [Paper](https://arxiv.org/abs/2311.12983) |
 | LMR-BENCH | Benchmark tasking agents with reproducing functions from NLP research papers. | [Paper](https://aclanthology.org/2025.emnlp-main.314/) |
 | MLE-bench | Kaggle-based benchmark for ML engineering agents by OpenAI. 75 competitions. | [Paper](https://arxiv.org/abs/2410.07095) \| [GitHub](https://github.com/openai/mle-bench) |
@@ -308,32 +355,32 @@ This repository runs a weekly **Research Assistant Agent** via GitHub Actions to
 
 ## MLE-bench Leaderboard
 
-*Top-performing agents on [MLE-bench](https://github.com/openai/mle-bench) (75 Kaggle competitions, ICLR 2025 Oral). Scored by "Any Medal %" — percentage of competitions earning at least a bronze medal. Agents run on 36 vCPUs, 440GB RAM, and one 24GB A10 GPU.*
+*Top-performing agents on [MLE-bench](https://github.com/openai/mle-bench) (75 Kaggle competitions, ICLR 2025 Oral). Scored by "Any Medal %" — percentage of competitions earning at least a bronze medal. Agents run on 36 vCPUs, 440GB RAM, and one 24GB A10 GPU. Official leaderboard submissions have been paused since April 24, 2026 while OpenAI develops an improved comparability process.*
 
 | Rank | Agent | LLM | All (%) | Hours | Date |
 |------|-------|-----|---------|-------|------|
-| 1 | PiEvolve (Fractal AI) | Gemini-3-Pro-Preview | 61.33 | 24 | Jan 2026 |
-| 2 | Famou-Agent 2.0 (Baidu) | Gemini-2.5-Pro | 59.56 | 24 | Dec 2025 |
-| 3 | ML-Master 2.0 (SJTU) | DeepSeek-V3.2 | 56.44 | 24 | Dec 2025 |
-| 4 | PiEvolve Fast (Fractal AI) | Gemini-3-Pro-Preview | 52.00 | 12 | Jan 2026 |
-| 5 | Leeroo | Gemini-3-Pro-Preview | 50.67 | 24 | Dec 2025 |
-| 6 | Thesis | gpt-5-codex | 48.44 | 24 | Nov 2025 |
-| 7 | CAIR MLE-STAR-Pro-1.5 | Gemini-2.5-Pro | 44.00 | 24 | Nov 2025 |
-| 8 | Famou-Agent (Baidu) | Gemini-2.5-Pro | 43.56 | 24 | Oct 2025 |
-| 9 | Operand ensemble | gpt-5 + multi-model | 39.56 | 24 | Oct 2025 |
-| 10 | CAIR MLE-STAR-Pro-1.0 | Gemini-2.5-Pro | 38.67 | 12 | Nov 2025 |
-| 11 | InternAgent | DeepSeek-R1 | 36.44 | 12 | Sep 2025 |
-| 12 | R&D-Agent | gpt-5 | 35.11 | 12 | Sep 2025 |
-| 13 | Neo multi-agent | Undisclosed | 34.22 | 36 | Jul 2025 |
-| 14 | AIRA-dojo (Meta) | o3 | 31.60 | 24 | May 2025 |
-| 15 | R&D-Agent | o3 + GPT-4.1 | 30.22 | 24 | Aug 2025 |
-| 16 | ML-Master (SJTU) | DeepSeek-R1 | 29.33 | 12 | Jun 2025 |
-| 17 | R&D-Agent | o1-preview | 22.40 | 24 | May 2025 |
-| 18 | AIDE | o1-preview | 17.12 | 24 | Oct 2024 |
-| 19 | AIDE | gpt-4o | 8.63 | 24 | Oct 2024 |
-| 20 | OpenHands | gpt-4o | 4.89 | 24 | Oct 2024 |
+| 1 | Famou-Agent 2.0 | Gemini-3-Pro-Preview | 64.44 | 24 | Feb 2026 |
+| 2 | AIBuildAI | Claude-Opus-4.6 | 63.11 | 24 | Mar 2026 |
+| 3 | CAIR MARS+ | Gemini-3-Pro-Preview | 62.67 | 24 | Feb 2026 |
+| 4 | MLEvolve | Gemini-3-Pro-Preview | 61.33 | 12 | Feb 2026 |
+| 5 | PiEvolve (Fractal AI) | Gemini-3-Pro-Preview | 61.33 | 24 | Jan 2026 |
+| 6 | Famou-Agent 2.0 | Gemini-2.5-Pro | 59.56 | 24 | Dec 2025 |
+| 7 | ML-Master 2.0 (SJTU) | DeepSeek-V3.2-Speciale | 56.44 | 24 | Dec 2025 |
+| 8 | CAIR MARS | Gemini-3-Pro-Preview | 56.00 | 24 | Jan 2026 |
+| 9 | PiEvolve (Fractal AI) | Gemini-3-Pro-Preview | 52.00 | 12 | Jan 2026 |
+| 10 | Leeroo | Gemini-3-Pro-Preview | 50.67 | 24 | Dec 2025 |
+| 11 | Thesis | gpt-5-codex | 48.44 | 24 | Nov 2025 |
+| 12 | CAIR MLE-STAR-Pro-1.5 | Gemini-2.5-Pro | 44.00 | 24 | Nov 2025 |
+| 13 | Famou-Agent | Gemini-2.5-Pro | 43.56 | 24 | Oct 2025 |
+| 14 | Operand ensemble | gpt-5 + multi-model | 39.56 | 24 | Oct 2025 |
+| 15 | CAIR MLE-STAR-Pro-1.0 | Gemini-2.5-Pro | 38.67 | 12 | Nov 2025 |
+| 16 | InternAgent | DeepSeek-R1 | 36.44 | 12 | Sep 2025 |
+| 17 | R&D-Agent | gpt-5 | 35.11 | 12 | Sep 2025 |
+| 18 | Neo multi-agent | Undisclosed | 34.22 | 36 | Jul 2025 |
+| 19 | AIRA-dojo (Meta) | o3 | 31.60 | 24 | May 2025 |
+| 20 | R&D-Agent | o3 + GPT-4.1 | 30.22 | 24 | Aug 2025 |
 
-*Top score improved from 16.9% (Oct 2024) to 61.3% (Jan 2026) — a ~3.6x improvement in 15 months. See [MLE-bench README](https://github.com/openai/mle-bench) for the full leaderboard with per-difficulty breakdowns.*
+*Top score improved from 16.9% (Oct 2024) to 64.4% (Feb 2026) — a ~3.8x improvement in 16 months. See [MLE-bench README](https://github.com/openai/mle-bench) for the full leaderboard with per-difficulty breakdowns and grading reports.*
 
 ---
 
