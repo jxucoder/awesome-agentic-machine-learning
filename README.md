@@ -76,6 +76,7 @@ This repository runs a weekly **Research Assistant Agent** via GitHub Actions to
 | [Karpathy](https://github.com/K-Dense-AI/karpathy) | Agentic ML Engineer using Claude Code SDK and Google ADK. By K-Dense. | ![GitHub stars](https://img.shields.io/github/stars/K-Dense-AI/karpathy?style=flat-square) |
 | [K-Dense Web](https://k-dense.ai/) | Autonomous AI Scientist platform with dual-loop multi-agent system for research, coding, and ML. | - |
 | [OpenEvolve](https://github.com/algorithmicsuperintelligence/openevolve) | Open-source implementation of Google DeepMind's AlphaEvolve for evolutionary code optimization. | ![GitHub stars](https://img.shields.io/github/stars/algorithmicsuperintelligence/openevolve?style=flat-square) |
+| [TSFLab](https://github.com/D2I-Group/TSFLab) | Self-improving workbench that equips coding agents for time-series forecasting research, benchmarking, and maintenance. | ![GitHub stars](https://img.shields.io/github/stars/D2I-Group/TSFLab?style=flat-square) |
 
 ---
 
@@ -93,6 +94,7 @@ This repository runs a weekly **Research Assistant Agent** via GitHub Actions to
 | [AutoGluon Assistant](https://github.com/autogluon/autogluon-assistant) | Multi-agent system for end-to-end multimodal ML automation. Also known as MLZero. | ![GitHub stars](https://img.shields.io/github/stars/autogluon/autogluon-assistant?style=flat-square) |
 | [AutoMind](https://github.com/zjunlp/AutoMind) | Adaptive agent with expert knowledge base from 455 Kaggle competitions and tree search. By ZJU NLP. | ![GitHub stars](https://img.shields.io/github/stars/zjunlp/AutoMind?style=flat-square) |
 | [AutoML-Agent](https://github.com/DeepAuto-AI/automl-agent) | Multi-Agent LLM Framework for Full-Pipeline AutoML. | ![GitHub stars](https://img.shields.io/github/stars/DeepAuto-AI/automl-agent?style=flat-square) |
+| [BobFlow](https://github.com/Texera/bobflow) | Data science agent that iteratively builds and executes dataflow programs, with analyst inspection of the workflow. | ![GitHub stars](https://img.shields.io/github/stars/Texera/bobflow?style=flat-square) |
 | [Data Interpreter](https://github.com/FoundationAgents/MetaGPT) | LLM agent for data science using hierarchical graph modeling and programmable node generation. Part of MetaGPT. ICLR 2025. | ![GitHub stars](https://img.shields.io/github/stars/FoundationAgents/MetaGPT?style=flat-square) |
 | [DS-Agent](https://github.com/guosyjlu/DS-Agent) | Automated data science agent using case-based reasoning from Kaggle. ICML 2024. | ![GitHub stars](https://img.shields.io/github/stars/guosyjlu/DS-Agent?style=flat-square) |
 | [EvoDS](https://github.com/usail-hkust/EvoDS) | Self-evolving data science agent that learns reusable skills and compresses long-horizon context. KDD 2026. | ![GitHub stars](https://img.shields.io/github/stars/usail-hkust/EvoDS?style=flat-square) |
@@ -170,6 +172,18 @@ This repository runs a weekly **Research Assistant Agent** via GitHub Actions to
 - **RECLAIM: Can Agents Reproduce the Claims of Machine Learning Papers?** (2026) - [Paper](https://arxiv.org/abs/2609.28850)
   100 NeurIPS 2025 papers with a pre-specified result, success criterion, and GPU-hour budget, split into run, retrain, and reimplement tiers.
 
+- **Auto-Research Arena: Benchmarking and Advancing Auto-Research in Language Modeling** (2026) - [Paper](https://arxiv.org/abs/2610.35866) | [Code](https://github.com/Auto-Research-Arena/auto-research-arena)
+  Multi-target benchmark for autonomous research on language-model pretraining, with nine targets across model quality, data, training, and inference efficiency. The paper reports that a simple sequential-search baseline outperforms several more elaborate harnesses.
+
+- **AutoRSE: Evaluating LLM Agents as Recommendation Engineers for Self-Evolving Recommender Systems** (2026) - [Paper](https://arxiv.org/abs/2610.37228) | [Code](https://github.com/Ray-Tiann/AutoRSE)
+  Framework for evaluating agents that autonomously improve recommendation models on six industrial-grade tasks. The paper reports an average relative improvement of 16.1% on five of the six tasks, mostly from tuning, training strategy, and ensembling.
+
+- **From AutoResearch to Continual AutoResearch: Do Agents Learn Across Tasks?** (2026) - [Paper](https://arxiv.org/abs/2611.05108)
+  Compares persistent and reset copies of the same agent on matched streams covering synthetic tasks, symbolic regression, forecasting, and tabular AutoML. The paper reports that persistent state improves research efficiency for all five frontier agents, without a consistent gain in final held-out solutions.
+
+- **ReproBridge: Building Reproducibility into ML Research Artifacts** (2026) - [Paper](https://arxiv.org/abs/2611.08452) | [Project](https://wyyyb.github.io/reprobridge_website/)
+  Agent workflow that saves a refined codebase, environment, launchers, and reproduction guide from an ML reproduction attempt. On 1,029 tasks from 36 papers, the paper reports mean reproduction success rising from 76.4% to 92.6%.
+
 ### Autonomous Data Science Agents
 
 *LLM agents for end-to-end data science automation with case-based reasoning and knowledge retrieval.*
@@ -188,6 +202,9 @@ This repository runs a weekly **Research Assistant Agent** via GitHub Actions to
 
 - **EvoDS: Self-Evolving Autonomous Data Science Agent with Skill Learning and Context Management** (KDD 2026) - [Paper](https://arxiv.org/abs/2606.03841) | [Code](https://github.com/usail-hkust/EvoDS)
   Learns reusable executable skills and when to compress long-horizon context. The paper reports a 28.9% average improvement over open-source data science agents on four benchmarks.
+
+- **BobFlow: Towards Human-Agent Collaborative Data Science Using Dataflows** (2026) - [Paper](https://arxiv.org/abs/2611.05761) | [Code](https://github.com/Texera/bobflow)
+  An agent iteratively builds and executes dataflow programs for data science tasks, while an analyst can inspect and correct the workflow. The paper reports accuracy gains of up to 18.6 points at just over one third the inference cost of a script-based ReAct agent.
 
 ### Multi-Agent Systems
 
@@ -234,6 +251,12 @@ This repository runs a weekly **Research Assistant Agent** via GitHub Actions to
 
 - **Toward Autonomous Long-Horizon Engineering for ML Research** (2026) - [Paper](https://arxiv.org/abs/2604.13018) | [Code](https://github.com/AweAI-Team/AiScientist)
   AiScientist coordinates specialist agents through durable workspace artifacts for paper reproduction and MLE competition workflows.
+
+- **Agent Stack for ML Training Lifecycle: Generation, Validation, and Optimization** (2026) - [Paper](https://arxiv.org/abs/2611.00384)
+  LinkedIn stack with AutoTorch for generating and migrating training pipelines and AutoResearch for architecture and training-configuration search. Validation hooks repair candidates before full-scale training. The paper reports completed generation and training in 92 of 115 runs, and a primary-metric gain on 28 of 100 production pipelines.
+
+- **Validation-Gated ML Pipeline Synthesis with Expert-Grounded Self-Evolving Skills** (2026) - [Paper](https://arxiv.org/abs/2611.04180)
+  EvoML uses orchestrator, executor, and curator agents to synthesize ML pipelines, advancing a phase only after structural, execution, and semantic checks, and writing recovered skills back into a library. The paper reports the best final model quality on all eight evaluation datasets.
 
 ### Search & Planning Methods
 
@@ -287,6 +310,9 @@ This repository runs a weekly **Research Assistant Agent** via GitHub Actions to
 - **ScienceFlow: A long-horizon agent for ML research, scientific discovery and beyond** (2026) - [Paper](https://arxiv.org/abs/2608.14354)
   Organizes long-horizon research into recoverable executable states and allocates compute from validated progress. The paper reports 70.22% Any Medal on full MLE-bench in 24 hours.
 
+- **MLE-World: Predicting Machine Learning Experiment Outcomes with a Learned World Model** (2026) - [Paper](https://arxiv.org/abs/2610.37175) | [Code](https://github.com/ko120/MLE_World)
+  Fine-tunes a model to predict a candidate program's terminal output, errors, and validation score without running it, then uses that prediction to scale test-time search. On 17 MLE-bench Lite tasks, the paper reports up to 22.1% higher observed mean performance than the same agent without the world model, with less real execution.
+
 ### Domain-Specific Agentic ML
 
 *Agentic systems tailored for specific ML domains.*
@@ -311,6 +337,12 @@ This repository runs a weekly **Research Assistant Agent** via GitHub Actions to
 
 - **InternAgent-1.5: A Unified Agentic Framework for Long-Horizon Autonomous Scientific Discovery** (2026) - [Paper](https://arxiv.org/abs/2602.08990) | [Code](https://github.com/InternScience/InternAgent)
   Generation, verification, and evolution subsystems for extended discovery cycles, including autonomous design of methods for core machine learning problems.
+
+- **A Multi-Agent Framework for Automated Machine Learning with Evidence-based Planning for Medical Image Analysis** (2026) - [Paper](https://arxiv.org/abs/2610.28410)
+  MedicalMLOmni plans model choice from published results and runs parallel hyperparameter search for single- and multi-modal medical tasks. The paper reports the best score on 19 of 20 benchmarks, with backbone-matched controls attributing the gains to the framework.
+
+- **TSFLab: A Self-Improving Agent-Agnostic Workbench for Time Series Forecasting Research** (2026) - [Paper](https://arxiv.org/abs/2610.40901) | [Code](https://github.com/D2I-Group/TSFLab)
+  Shared tools that let coding agents reproduce, benchmark, and develop forecasting methods, and keep those resources maintained. The paper reports 20-163% higher task completion and 11-66% fewer fresh tokens per completed task than the baselines.
 
 ### LLM-Based ML Optimization
 
@@ -339,6 +371,12 @@ This repository runs a weekly **Research Assistant Agent** via GitHub Actions to
 
 - **Reward-rate Policy Gradient for Efficient Machine Learning Engineering Agents** (2026) - [Paper](https://arxiv.org/abs/2609.36393)
   Optimizes reward per unit time for MLE actions whose durations vary. On a Qwen3.5-4B self-improvement loop, the paper reports higher fixed-budget reward than vanilla RL on MLE-Bench and NanoGPT.
+
+- **From Intent to Improvement: Agentic Dataset Search for Better Model Training** (2026) - [Paper](https://arxiv.org/abs/2610.39608) | [Code](https://github.com/nju-websoft/AgenticDS)
+  AgenticDS turns a training-data request into a typed search plan, runs deterministic retrieval, and accepts a dataset only after provenance checks. On HuDS-Bench, the paper reports 25.7% higher NDCG@10 than the strongest dense-sparse hybrid, and the selected datasets give the best downstream accuracy in mathematics, code, and medicine.
+
+- **Training LLM Agents to Automate LLM Post-Training with RSI-Dojo** (2026) - [Paper](https://arxiv.org/abs/2611.03698)
+  Converts research artifacts into 281 executable post-training tasks and fine-tunes agents on filtered training trajectories. The paper reports that RSI-Dojo-35B-A3B raises its base model by 16.87 PostTrainBench points, to 29.95 on PostTrainBench and 53.29 on PostTrainBench-Lite.
 
 - **CAAFE: Context-Aware Automated Feature Engineering** (NeurIPS 2024) - [Paper](https://arxiv.org/abs/2305.03403)
   LLM-driven automated feature engineering pipeline that generates and executes code for new features using dataset context.
@@ -378,7 +416,7 @@ This repository runs a weekly **Research Assistant Agent** via GitHub Actions to
 
 *Pre-trained models that enable rapid ML development.*
 
-- **TabPFN: A Transformer That Solves Small Tabular Classification Problems in a Second** (ICLR 2023) - [Paper](https://arxiv.org/abs/2207.01848) | [Code](https://github.com/automl/TabPFN)  
+- **TabPFN: A Transformer That Solves Small Tabular Classification Problems in a Second** (ICLR 2023) - [Paper](https://arxiv.org/abs/2207.01848) | [Code](https://github.com/PriorLabs/TabPFN)  
   Prior-Data Fitted Network using in-context learning for instant tabular classification.
 
 - **Unlocking the Full Potential of Data Science Requires Tabular Foundation Models, Agents, and Humans** (NeurIPS 2025 Position) - [Paper](https://openreview.net/forum?id=aXMPvmBAm5)  
@@ -394,8 +432,11 @@ This repository runs a weekly **Research Assistant Agent** via GitHub Actions to
 |-----------|-------------|------|
 | Agent^2 RL-Bench | Benchmark for agents that autonomously engineer RL post-training loops for foundation models. | [Paper](https://arxiv.org/abs/2604.10547) \| [GitHub](https://github.com/microsoft/RD-Agent/blob/main/rdagent/scenarios/rl/autorl_bench/README.md) |
 | Ambig-DS | Diagnostic suites for target and objective ambiguity in data-science agents. | [Paper](https://arxiv.org/abs/2605.09698) \| [Data](https://huggingface.co/datasets/anonymous222bit/Ambig-DS-T) |
+| Auto-Research Arena | Nine-target benchmark for autonomous research on language-model pretraining. | [Paper](https://arxiv.org/abs/2610.35866) \| [GitHub](https://github.com/Auto-Research-Arena/auto-research-arena) |
 | AutoML-Agent Benchmark | 18 diverse datasets across tabular, CV, NLP, time-series, and graph tasks. | [Paper](https://openreview.net/forum?id=p1UBWkOvZm) |
+| AutoRSE | Six industrial recommendation tasks for agents that improve recommender models. | [Paper](https://arxiv.org/abs/2610.37228) \| [GitHub](https://github.com/Ray-Tiann/AutoRSE) |
 | CausalDS | Synthetic causal scenes for tool-using data-science agents, including abstention tasks. | [Paper](https://arxiv.org/abs/2607.08093) \| [GitHub](https://github.com/andleb/causalds) |
+| Continual AutoResearch | Matched task streams for testing whether ML research agents reuse experience across problems. | [Paper](https://arxiv.org/abs/2611.05108) |
 | DataSciBench | Comprehensive data science benchmark with TFC framework for LLM evaluation. | [Paper](https://arxiv.org/abs/2502.13897) \| [GitHub](https://github.com/THUDM/DataSciBench) |
 | DeltaML-Bench | 48 repository tasks that ask agents to improve published ML baselines. | [Paper](https://arxiv.org/abs/2608.19653) \| [GitHub](https://github.com/AlgorithmicResearchGroup/deltaml-bench-vivaria) |
 | DS-1000 | 1,000 data science code generation problems from StackOverflow across 7 libraries. | [Paper](https://arxiv.org/abs/2211.11501) |
@@ -403,6 +444,7 @@ This repository runs a weekly **Research Assistant Agent** via GitHub Actions to
 | DSGym | Modular task suite and execution environment for evaluating and training data science agents. | [Paper](https://arxiv.org/abs/2601.16344) \| [GitHub](https://github.com/fannie1208/DSGym) |
 | FML-bench | 18 fundamental ML research tasks with process-level metrics for agent search dynamics. | [Paper](https://arxiv.org/abs/2605.17373) \| [GitHub](https://github.com/qrzou/FML-bench) |
 | GAIA | General AI Assistants benchmark testing real-world reasoning and tool use. | [Paper](https://arxiv.org/abs/2311.12983) |
+| HuDS-Bench | 200 dataset-search queries with graded judgments for training-data agents. | [Paper](https://arxiv.org/abs/2610.39608) \| [GitHub](https://github.com/nju-websoft/AgenticDS) |
 | LMR-BENCH | Benchmark tasking agents with reproducing functions from NLP research papers. | [Paper](https://aclanthology.org/2025.emnlp-main.314/) |
 | MLE-bench | Kaggle-based benchmark for ML engineering agents by OpenAI. 75 competitions. | [Paper](https://arxiv.org/abs/2410.07095) \| [GitHub](https://github.com/openai/mle-bench) |
 | MLE-Dojo | Gym-style RL environment built on MLE-bench with 200+ Kaggle competitions for agent training. | [Paper](https://arxiv.org/abs/2505.07782) |
@@ -411,6 +453,8 @@ This repository runs a weekly **Research Assistant Agent** via GitHub Actions to
 | MLAgentBench | Benchmark for LLM agents on ML experimentation tasks. | [Paper](https://openreview.net/forum?id=1Fs1LvjYQW) |
 | MLR-Bench | Open-ended ML research benchmark with 201 tasks from major ML conferences. | [Paper](https://arxiv.org/abs/2505.19955) |
 | RECLAIM | 100 NeurIPS 2025 papers for reproducing a pre-specified machine learning claim. | [Paper](https://arxiv.org/abs/2609.28850) |
+| ReproBridge-Bench | 1,029 reproduction tasks from 387 experiments across 36 machine learning papers. | [Paper](https://arxiv.org/abs/2611.08452) \| [Project](https://wyyyb.github.io/reprobridge_website/) |
+| RSI-Dojo | 281 executable post-training environments for teaching agents to train models. | [Paper](https://arxiv.org/abs/2611.03698) |
 
 ---
 
