@@ -184,6 +184,18 @@ This repository runs a weekly **Research Assistant Agent** via GitHub Actions to
 - **ReproBridge: Building Reproducibility into ML Research Artifacts** (2026) - [Paper](https://arxiv.org/abs/2611.08452) | [Project](https://wyyyb.github.io/reprobridge_website/)
   Agent workflow that saves a refined codebase, environment, launchers, and reproduction guide from an ML reproduction attempt. On 1,029 tasks from 36 papers, the paper reports mean reproduction success rising from 76.4% to 92.6%.
 
+- **PostTrainBench: Can LLM Agents Automate LLM Post-Training?** (ICML 2026) - [Paper](https://arxiv.org/abs/2603.08640) | [Code](https://github.com/aisa-group/PostTrainBench)
+  Benchmark for agents that post-train a base LLM for 10 hours on one H100, with no prescribed strategy. The paper reports 23.2% for the best agent vs. 51.1% for official instruction-tuned models, and 89% for GPT-5.1 Codex Max on BFCL with Gemma-3-4B vs. 67% for the official model.
+
+- **CompressionBench: How can your coding agents compress LLMs?** (2026) - [Paper](https://arxiv.org/abs/2611.06858) | [Code](https://github.com/Infini-AI-Lab/Compression-Bench)
+  A coding agent compresses a checkpoint under a storage limit and time budget, guided by perplexity, and must return weights plus executable inference code. The paper reports that 29 of 36 submissions pass verification, and that the lowest-perplexity design per task averages a 3.4% perplexity increase over BF16 with 77.33% downstream accuracy vs. 79.56% for BF16.
+
+- **BioXArena-Pro: a research-grade benchmark for autonomous biomedical machine learning agents** (2026) - [Paper](https://arxiv.org/abs/2611.13994) | [Code](https://github.com/mbzuai-ai4bio/BioXArena-Pro) | [Data](https://huggingface.co/datasets/mbzuai-ai4bio/BioXArena-Pro-Public)
+  64 research-level modelling tasks from eight biomedical domains, most holding out whole biological units. The paper reports a best score of 55.1 of 100 across 22 agent configurations, and that published methods trail by 8.2 points on rebuilt tasks.
+
+- **CastWorld: Benchmarking Context-Aware Agentic Time Series Forecasting Beyond Predictive Accuracy** (2026) - [Paper](https://arxiv.org/abs/2611.15262) | [Code](https://github.com/CastWorld-Bench/CastWorld)
+  Benchmark with 25 real-world datasets across 8 domains and a 49-tool harness that revises forecasts as agents gather evidence. The paper reports that allowing evidence acquisition during refinement improves task-aware forecast scores for all three evaluated models.
+
 ### Autonomous Data Science Agents
 
 *LLM agents for end-to-end data science automation with case-based reasoning and knowledge retrieval.*
@@ -313,6 +325,12 @@ This repository runs a weekly **Research Assistant Agent** via GitHub Actions to
 - **MLE-World: Predicting Machine Learning Experiment Outcomes with a Learned World Model** (2026) - [Paper](https://arxiv.org/abs/2610.37175) | [Code](https://github.com/ko120/MLE_World)
   Fine-tunes a model to predict a candidate program's terminal output, errors, and validation score without running it, then uses that prediction to scale test-time search. On 17 MLE-bench Lite tasks, the paper reports up to 22.1% higher observed mean performance than the same agent without the world model, with less real execution.
 
+- **AgentSSL: Can MLE Agents Leverage Unlabeled Data?** (NeurIPS 2026) - [Paper](https://arxiv.org/abs/2611.17323) | [Code](https://github.com/akanksha-sarkar/AgentSSL)
+  Frames semi-supervised learning as program search for MLE agents. The paper reports that agents exceed the strongest human-engineered baselines in 8 of 12 settings by up to 21.8%, and that selecting a program with the agent's own feedback metric can drop performance by as much as 47%. It introduces ProgramSelectBench, with 16,977 agent-generated and human-engineered SSL programs.
+
+- **AutoManifold: Agentic Design of Data Visualisation Algorithms via Manifold Embedding** (NeurIPS 2026) - [Paper](https://arxiv.org/abs/2611.13710) | [Code](https://github.com/buraksusam/AutoManifold_NeurIPS2026)
+  Multi-agent pipeline that designs, implements, and revises manifold-embedding algorithms for user-specified structural priorities. The paper compares the generated algorithms with t-SNE, UMAP, and PaCMAP and reports that priority-conditioned synthesis can outperform those hand-designed methods.
+
 ### Domain-Specific Agentic ML
 
 *Agentic systems tailored for specific ML domains.*
@@ -343,6 +361,9 @@ This repository runs a weekly **Research Assistant Agent** via GitHub Actions to
 
 - **TSFLab: A Self-Improving Agent-Agnostic Workbench for Time Series Forecasting Research** (2026) - [Paper](https://arxiv.org/abs/2610.40901) | [Code](https://github.com/D2I-Group/TSFLab)
   Shared tools that let coding agents reproduce, benchmark, and develop forecasting methods, and keep those resources maintained. The paper reports 20-163% higher task completion and 11-66% fewer fresh tokens per completed task than the baselines.
+
+- **Gradient-Aware AI Agents for Autonomous Turbulence Model Discovery via Differentiable CFD** (2026) - [Paper](https://arxiv.org/abs/2611.16082)
+  Agents propose closures, build differentiable training programs, and revise them from simulation outcomes and gradients. The paper reports that gradient-based training recovers reference coefficients that forward evaluation alone does not reach within the same budget, and that the agents discover analytical and neural closures with better agreement to the targeted statistics.
 
 ### LLM-Based ML Optimization
 
@@ -386,6 +407,9 @@ This repository runs a weekly **Research Assistant Agent** via GitHub Actions to
 
 - **A Human-Centered Automated Machine Learning Agent with LLMs** (2025) - [Paper](https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2025.1680845/full)
   LLM-driven agent enabling natural language interaction throughout the entire ML workflow with adaptive hyperparameter optimization.
+
+- **Large Language Models as a Universal Searcher for Open-World Automated Machine Learning** (2026) - [Paper](https://arxiv.org/abs/2611.12791)
+  NCode encodes architecture, training-hyperparameter, and data-ratio choices as one sequence so an LLM searcher can jointly optimize them without task-specific fine-tuning. The paper reports cross-modality transfer from a single vision domain, including a GenEval score of 0.91 for a jointly optimized billion-parameter diffusion transformer that required 896 GPU-days.
 
 ### Surveys
 
@@ -435,7 +459,10 @@ This repository runs a weekly **Research Assistant Agent** via GitHub Actions to
 | Auto-Research Arena | Nine-target benchmark for autonomous research on language-model pretraining. | [Paper](https://arxiv.org/abs/2610.35866) \| [GitHub](https://github.com/Auto-Research-Arena/auto-research-arena) |
 | AutoML-Agent Benchmark | 18 diverse datasets across tabular, CV, NLP, time-series, and graph tasks. | [Paper](https://openreview.net/forum?id=p1UBWkOvZm) |
 | AutoRSE | Six industrial recommendation tasks for agents that improve recommender models. | [Paper](https://arxiv.org/abs/2610.37228) \| [GitHub](https://github.com/Ray-Tiann/AutoRSE) |
+| BioXArena-Pro | 64 research-level biomedical modelling tasks for autonomous ML agents. | [Paper](https://arxiv.org/abs/2611.13994) \| [GitHub](https://github.com/mbzuai-ai4bio/BioXArena-Pro) \| [Data](https://huggingface.co/datasets/mbzuai-ai4bio/BioXArena-Pro-Public) |
+| CastWorld | 25 datasets across 8 domains and a 49-tool harness for agentic time-series forecasting. | [Paper](https://arxiv.org/abs/2611.15262) \| [GitHub](https://github.com/CastWorld-Bench/CastWorld) |
 | CausalDS | Synthetic causal scenes for tool-using data-science agents, including abstention tasks. | [Paper](https://arxiv.org/abs/2607.08093) \| [GitHub](https://github.com/andleb/causalds) |
+| CompressionBench | Coding-agent tasks that compress an LLM under a storage limit and return runnable inference code. | [Paper](https://arxiv.org/abs/2611.06858) \| [GitHub](https://github.com/Infini-AI-Lab/Compression-Bench) |
 | Continual AutoResearch | Matched task streams for testing whether ML research agents reuse experience across problems. | [Paper](https://arxiv.org/abs/2611.05108) |
 | DataSciBench | Comprehensive data science benchmark with TFC framework for LLM evaluation. | [Paper](https://arxiv.org/abs/2502.13897) \| [GitHub](https://github.com/THUDM/DataSciBench) |
 | DeltaML-Bench | 48 repository tasks that ask agents to improve published ML baselines. | [Paper](https://arxiv.org/abs/2608.19653) \| [GitHub](https://github.com/AlgorithmicResearchGroup/deltaml-bench-vivaria) |
@@ -452,6 +479,8 @@ This repository runs a weekly **Research Assistant Agent** via GitHub Actions to
 | MLE-Smith | Automated pipeline for generating competition-style MLE challenges from raw datasets. | [Paper](https://arxiv.org/abs/2510.07307) |
 | MLAgentBench | Benchmark for LLM agents on ML experimentation tasks. | [Paper](https://openreview.net/forum?id=1Fs1LvjYQW) |
 | MLR-Bench | Open-ended ML research benchmark with 201 tasks from major ML conferences. | [Paper](https://arxiv.org/abs/2505.19955) |
+| PostTrainBench | Agents post-train a base LLM for 10 hours on one H100, with no prescribed strategy. | [Paper](https://arxiv.org/abs/2603.08640) \| [GitHub](https://github.com/aisa-group/PostTrainBench) |
+| ProgramSelectBench | 16,977 agent-generated and human-engineered semi-supervised learning programs. | [Paper](https://arxiv.org/abs/2611.17323) \| [Data](https://huggingface.co/datasets/ethan-y-lin/ProgramSelectBench) |
 | RECLAIM | 100 NeurIPS 2025 papers for reproducing a pre-specified machine learning claim. | [Paper](https://arxiv.org/abs/2609.28850) |
 | ReproBridge-Bench | 1,029 reproduction tasks from 387 experiments across 36 machine learning papers. | [Paper](https://arxiv.org/abs/2611.08452) \| [Project](https://wyyyb.github.io/reprobridge_website/) |
 | RSI-Dojo | 281 executable post-training environments for teaching agents to train models. | [Paper](https://arxiv.org/abs/2611.03698) |
